@@ -16,3 +16,14 @@ model Sample {
 
   @@map("samples")
 }
+
+model Product {
+  id        Int      @id @default(autoincrement())
+  title     String
+  price     Int
+  image     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("products")
+}
