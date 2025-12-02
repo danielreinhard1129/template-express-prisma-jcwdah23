@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import cors from "cors";
 import express, { Express } from "express";
 import { PORT } from "./config/env";

@@ -1,5 +1,7 @@
 import { Router } from "express";
 import { SampleController } from "./sample.controller";
+import { validateBody } from "../../middlewares/validation.middleware";
+import { CreateSampleDTO } from "./dto/create-sample.dto";
 
 export class SampleRouter {
   router: Router;
@@ -14,6 +16,11 @@ export class SampleRouter {
   private initRoutes = () => {
     this.router.get("/", this.sampleController.getSamples);
     this.router.get("/:id", this.sampleController.getSample);
+    this.router.post(
+      "/",
+      validateBody(CreateSampleDTO),
+      this.sampleController.createSample
+    );
   };
 
   getRouter = () => {
