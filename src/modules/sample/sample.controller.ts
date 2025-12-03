@@ -23,4 +23,9 @@ export class SampleController {
     const result = await this.sampleService.createSample(req.body);
     return res.status(200).send(result);
   };
+
+  testSendEmail = async (req: Request, res: Response) => {
+    const result = await this.sampleService.testSendEmail(req.body);
+    return res.status(200).send(result);
+  };
 }

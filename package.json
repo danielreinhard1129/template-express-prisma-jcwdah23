@@ -16,6 +16,7 @@
     "@types/express": "^5.0.5",
     "@types/multer": "^2.0.0",
     "@types/node": "^24.10.1",
+    "@types/nodemailer": "^7.0.4",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
@@ -28,7 +29,9 @@
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "handlebars": "^4.7.8",
     "multer": "^2.0.2",
+    "nodemailer": "^7.0.11",
     "prisma": "^5.22.0",
     "reflect-metadata": "^0.2.2"
   }

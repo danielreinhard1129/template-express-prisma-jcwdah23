@@ -2,6 +2,7 @@ import { Router } from "express";
 import { SampleController } from "./sample.controller";
 import { validateBody } from "../../middlewares/validation.middleware";
 import { CreateSampleDTO } from "./dto/create-sample.dto";
+import { TestSendEmailDTO } from "./dto/test-send-email.dto";
 
 export class SampleRouter {
   router: Router;
@@ -20,6 +21,11 @@ export class SampleRouter {
       "/",
       validateBody(CreateSampleDTO),
       this.sampleController.createSample
+    );
+    this.router.post(
+      "/test-send-email",
+      validateBody(TestSendEmailDTO),
+      this.sampleController.testSendEmail
     );
   };
 
